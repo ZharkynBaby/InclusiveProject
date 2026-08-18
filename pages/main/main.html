@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ТестЛаб — Задания</title>
+    <link rel="stylesheet" href="/frontend/pages/css/main.css" />
+    <link rel="stylesheet" href="/frontend/pages/main/css/quiz-styles.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Mulish:wght@300;400;600&display=swap" rel="stylesheet"/>
+    <style>
+      
+    </style>
+  </head>
+  <body class="page-scroll has-fixed-sidebar">
+    <div class="noise"></div>
+
+    <div class="sidebar-scrim" id="sidebarScrim" aria-hidden="true"></div>
+
+    <aside class="fixed-sidebar" id="fixedSidebar" aria-label="Боковая навигация">
+      <div class="fixed-sidebar__top">
+        <button class="fixed-sidebar__burger" id="sidebarToggle" type="button" aria-label="Открыть или свернуть меню" aria-expanded="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="fixed-sidebar__brand" aria-hidden="true">A</div>
+        <div class="fixed-sidebar__brand-text">
+          <strong>Fixed</strong>
+          <span>Frontend hub</span>
+        </div>
+      </div>
+
+      <nav class="fixed-sidebar__section" aria-label="Главное меню">
+        <div class="fixed-sidebar__label">Главная</div>
+        <a class="fixed-sidebar__link active" href="main.html" aria-current="page">
+          <span class="fixed-sidebar__icon">⌂</span>
+          <span class="fixed-sidebar__text">Задания</span>
+        </a>
+        <a class="fixed-sidebar__link" href="courses.html">
+          <span class="fixed-sidebar__icon">▦</span>
+          <span class="fixed-sidebar__text">Курсы</span>
+        </a>
+        <a class="fixed-sidebar__link" href="about.html">
+          <span class="fixed-sidebar__icon">i</span>
+          <span class="fixed-sidebar__text">О нас</span>
+        </a>
+      </nav>
+
+      <nav class="fixed-sidebar__section" aria-label="Режимы проекта">
+        <div class="fixed-sidebar__label">Режимы</div>
+        <a class="fixed-sidebar__link" href="/frontend/pages/forInclusive/forinclusive.html">
+          <span class="fixed-sidebar__icon">◌</span>
+          <span class="fixed-sidebar__text">Инклюзивный режим</span>
+          <b class="fixed-sidebar__badge">A11Y</b>
+        </a>
+      </nav>
+
+      <div class="fixed-sidebar__section" aria-label="Настройки интерфейса">
+        <div class="fixed-sidebar__label">Настройки</div>
+        <button class="fixed-sidebar__link fixed-sidebar__button" id="sidebarTheme" type="button" aria-pressed="false">
+          <span class="fixed-sidebar__icon">◐</span>
+          <span class="fixed-sidebar__text">Тема</span>
+        </button>
+        <button class="fixed-sidebar__link fixed-sidebar__button" id="sidebarText" type="button" aria-pressed="false">
+          <span class="fixed-sidebar__icon">A+</span>
+          <span class="fixed-sidebar__text">Крупный текст</span>
+        </button>
+        <button class="fixed-sidebar__link fixed-sidebar__button" id="sidebarContrast" type="button" aria-pressed="false">
+          <span class="fixed-sidebar__icon">◑</span>
+          <span class="fixed-sidebar__text">Доступность</span>
+        </button>
+      </div>
+    </aside>
+
+    <header class="header">
+      <div class="header__inner">
+        <a href="/frontend/pages/home/index.html" class="header__back" aria-label="На главную">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M13 8H3M7 4L3 8l4 4"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          На главную
+        </a>
+
+        <div class="header__logo">
+          <span class="logo-dot"></span>
+          <span class="logo-text">ТестЛаб</span>
+        </div>
+
+        <nav class="header__nav">
+          <a href="#" class="active">Задания</a>
+          <a href="courses.html">Курсы</a>
+          <a href="about.html">О нас</a>
+        </nav>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+          <span class="burger-btn__line"></span>
+          <span class="burger-btn__line"></span>
+          <span class="burger-btn__line"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile nav drawer -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <div class="mobile-nav__backdrop" id="mobileNavBackdrop"></div>
+      <div class="mobile-nav__drawer">
+        <div class="mobile-nav__close-label">Навигация</div>
+        <a href="#" class="active"><span class="mnav-dot"></span>Задания</a>
+        <a href="courses.html"><span class="mnav-dot"></span>Курсы</a>
+        <a href="about.html"><span class="mnav-dot"></span>О нас</a>
+      </div>
+    </div>
+
+    <main class="page-main">
+      <section class="hero">
+        <div class="hero__glow"></div>
+        <div class="hero__label">6 заданий · HTML &amp; CSS</div>
+        <h1 class="hero__title">Тестовые<br /><em>задания</em></h1>
+        <p class="hero__sub">Выбери задание и проверь свои знания в вёрстке</p>
+      </section>
+
+      <section class="cards" id="cards">
+        <article class="card" data-id="1" tabindex="0" role="button">
+          <div class="card__num">01</div>
+          <div class="card__tags"><span class="tag tag--html">HTML</span></div>
+          <h2 class="card__title">Семантическая разметка</h2>
+          <p class="card__desc">Расставь правильные семантические теги для новостной статьи.</p>
+          <div class="card__arrow">→</div>
+        </article>
+        <article class="card" data-id="2" tabindex="0" role="button"><div class="card__num">02</div><div class="card__tags"><span class="tag tag--css">CSS</span></div><h2 class="card__title">Flexbox-раскладка</h2><p class="card__desc">Создай адаптивный навбар с помощью только flexbox.</p><div class="card__arrow">→</div></article>
+        <article class="card" data-id="3" tabindex="0" role="button"><div class="card__num">03</div><div class="card__tags"><span class="tag tag--html">HTML</span><span class="tag tag--css">CSS</span></div><h2 class="card__title">Форма обратной связи</h2><p class="card__desc">Свёрстай доступную форму с валидацией и стилями фокуса.</p><div class="card__arrow">→</div></article>
+        <article class="card" data-id="4" tabindex="0" role="button"><div class="card__num">04</div><div class="card__tags"><span class="tag tag--css">CSS</span></div><h2 class="card__title">CSS Grid галерея</h2><p class="card__desc">Построй фото-галерею с масонри-эффектом через CSS Grid.</p><div class="card__arrow">→</div></article>
+        <article class="card" data-id="5" tabindex="0" role="button"><div class="card__num">05</div><div class="card__tags"><span class="tag tag--html">HTML</span></div><h2 class="card__title">Таблицы и доступность</h2><p class="card__desc">Создай таблицу данных с правильными ARIA-атрибутами.</p><div class="card__arrow">→</div></article>
+        <article class="card" data-id="6" tabindex="0" role="button"><div class="card__num">06</div><div class="card__tags"><span class="tag tag--css">CSS</span></div><h2 class="card__title">Анимация и переходы</h2><p class="card__desc">Добавь плавные CSS-анимации к кнопкам и карточкам.</p><div class="card__arrow">→</div></article>
+      </section>
+    </main>
+
+    <div class="modal" id="modal" role="dialog" aria-modal="true">
+      <div class="modal__backdrop" id="modalBackdrop"></div>
+      <div class="modal__box">
+        <button class="modal__close" id="modalClose">✕</button>
+        <div class="modal__tag-row" id="modalTags"></div>
+        <h2 class="modal__title" id="modalTitle"></h2>
+        <p class="modal__desc" id="modalDesc"></p>
+        <div class="modal__code-block">
+          <pre><code id="modalCode"></code></pre>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/frontend/pages/main/js/main.js"></script>
+  </body>
+</html>
